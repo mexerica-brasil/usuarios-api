@@ -7,6 +7,7 @@ import java.util.Objects;
 
 import com.velsis.usuarios_api.enums.Constants;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,6 +18,7 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
@@ -32,6 +34,8 @@ public class Usuario {
     private Integer id;
 
     @NotNull
+    @NotBlank
+    @Size(min = 11, max = 11)  
     @Column(name = "cpf", nullable = false, length = 11, unique = true)
     private String cpf;
 
@@ -52,7 +56,8 @@ public class Usuario {
     @Column(name = "dataUltimaAlteracao", nullable = false)
     private LocalDateTime dataUltimaAlteracao;
 
-    @OneToOne
+    @Valid 
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id", referencedColumnName = "id")
     private Endereco endereco;
 

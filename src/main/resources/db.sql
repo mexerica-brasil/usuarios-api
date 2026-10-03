@@ -21,14 +21,16 @@ CREATE TABLE Endereco (
     uf                  CHAR(2)         NOT NULL,
     cep                 VARCHAR(9)      NOT NULL,
     
-    PRIMARY KEY (id),
-    UNIQUE KEY uk_endereco_logradouro (logradouro),
-    UNIQUE KEY uk_endereco_cep (cep)
+    PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 ALTER TABLE Usuario
-    ADD COLUMN endereco_id BIGINT NOT NULL,
+    ADD COLUMN endereco_id BIGINT NULL,
     ADD CONSTRAINT fk_usuario_endereco
     FOREIGN KEY (endereco_id) REFERENCES Endereco(id);
+
+ALTER TABLE Endereco
+    ADD CONSTRAINT uk_endereco
+    UNIQUE (logradouro, numero, cidade, cep);
 
 CREATE INDEX idx_usuario_nome ON Usuario(nome);  -- desnecessário

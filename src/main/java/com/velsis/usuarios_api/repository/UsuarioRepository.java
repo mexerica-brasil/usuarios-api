@@ -4,6 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.velsis.usuarios_api.entity.Usuario;
 
+
 public interface UsuarioRepository extends JpaRepository <Usuario, Integer> {
     
+    public Usuario findByCpf(String cpf);
 }
