@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,6 +48,12 @@ public class UsuarioResource {
     @GetMapping("/{cpf}") 
     public ResponseEntity<Usuario>  recuperarPeloCpf(@PathVariable String cpf) {
         Usuario usuario = service.recuperarPeloCpf(cpf);
-        return usuario != null ? ResponseEntity.ok().body(usuario) : ResponseEntity.notFound().build(); 
+        return usuario != null ? ResponseEntity.ok(usuario) : ResponseEntity.notFound().build(); 
+    }
+
+    @DeleteMapping("/{id}") 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void excluir(@PathVariable Integer id) {
+        service.exluir(id);
     }
 }

@@ -9,6 +9,6 @@ import com.velsis.usuarios_api.entity.Endereco;
 
 public interface EnderecoRepository extends JpaRepository<Endereco, Integer> {
 
-    public Endereco findByCep(String cep);
+    public List<Endereco> findAllByCep(String cep);
     public List<Endereco> findByLogradouroAndCidade(String logradouro, String cidade);   
 }

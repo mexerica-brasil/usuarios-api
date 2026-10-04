@@ -95,3 +95,1463 @@ java.nio.channels.AsynchronousCloseException
 2026-10-04T06:51:36.328-03:00  INFO 2442 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2026-10-04T06:51:36.346-03:00  WARN 2442 --- [usuarios-api] [http-nio-8181-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.velsis.usuarios_api.entity.Usuario> com.velsis.usuarios_api.resource.UsuarioResource.criar(com.velsis.usuarios_api.entity.Usuario,jakarta.servlet.http.HttpServletResponse): [Field error in object 'usuario' on field 'cpf': rejected value [12417776991]; codes [CPF.usuario.cpf,CPF.cpf,CPF.java.lang.String,CPF]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.cpf,cpf]; arguments []; default message [cpf]]; default message [{0} informado é inválido.]] ]
 2026-10-04T06:52:42.914-03:00  WARN 2442 --- [usuarios-api] [http-nio-8181-exec-2] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.velsis.usuarios_api.exception.EnderecoLogradouroDuplicadoException: O endereço Rua Justo Manfron da cidade Curitiba já está cadastrado com o Cep 82410-540;]
+2026-10-04T07:03:42.643-03:00  INFO 2442 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 2442 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:03:42.643-03:00  INFO 2442 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:03:42.751-03:00  INFO 2442 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:03:42.758-03:00  INFO 2442 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:03:42.824-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:03:42.825-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:03:42.825-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:03:42.832-03:00  INFO 2442 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 188 ms
+2026-10-04T07:03:42.861-03:00  WARN 2442 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-3 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:03:42.861-03:00  INFO 2442 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-04T07:03:42.865-03:00  INFO 2442 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47c6464d
+2026-10-04T07:03:42.865-03:00  INFO 2442 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-04T07:03:42.865-03:00  INFO 2442 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:03:42.881-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:03:42.883-03:00  INFO 2442 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:03:42.926-03:00  INFO 2442 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:03:42.926-03:00  INFO 2442 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:03:42.963-03:00  WARN 2442 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:03:43.036-03:00  INFO 2442 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:03:43.039-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:03:43.049-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:03:43.050-03:00  INFO 2442 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.42 seconds (process running for 879.284)
+2026-10-04T07:03:43.051-03:00  INFO 2442 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:09:31.698-03:00  INFO 2442 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2026-10-04T07:09:31.699-03:00  INFO 2442 --- [usuarios-api] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:09:33.703-03:00  INFO 2442 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:09:33.703-03:00 ERROR 2442 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:09:33.704-03:00  INFO 2442 --- [usuarios-api] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:09:33.704-03:00  INFO 2442 --- [usuarios-api] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-04T07:09:33.705-03:00  INFO 2442 --- [usuarios-api] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-10-04T07:09:33.771-03:00  INFO 2442 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 2442 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:09:33.771-03:00  INFO 2442 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:09:33.865-03:00  INFO 2442 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:09:33.873-03:00  INFO 2442 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:09:33.936-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:09:33.936-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:09:33.936-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:09:33.942-03:00  INFO 2442 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 170 ms
+2026-10-04T07:09:33.970-03:00  WARN 2442 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-4 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:09:33.970-03:00  INFO 2442 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-04T07:09:33.973-03:00  INFO 2442 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d9f45aa
+2026-10-04T07:09:33.973-03:00  INFO 2442 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-04T07:09:33.974-03:00  INFO 2442 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:09:33.990-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:09:33.992-03:00  INFO 2442 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:09:34.036-03:00  INFO 2442 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:09:34.037-03:00  INFO 2442 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:09:34.073-03:00  WARN 2442 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:09:34.132-03:00  INFO 2442 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:09:34.135-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:09:34.143-03:00  INFO 2442 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:09:34.145-03:00  INFO 2442 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.386 seconds (process running for 1230.395)
+2026-10-04T07:09:34.146-03:00  INFO 2442 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:23:37.733-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:23:37.735-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:23:37.769-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-04T07:23:37.769-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-04T07:23:38.316-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:23:38.350-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:23:38.833-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:23:38.841-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:23:38.842-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:23:38.864-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1095 ms
+2026-10-04T07:23:39.035-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:23:39.036-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-04T07:23:39.155-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4765c613
+2026-10-04T07:23:39.156-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-04T07:23:39.176-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:23:39.212-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-04T07:23:39.481-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:23:39.537-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:23:40.057-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:23:40.061-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:23:40.124-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-04T07:23:40.277-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:23:40.655-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:23:40.669-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:23:40.727-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:23:40.733-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 3.283 seconds (process running for 3.744)
+2026-10-04T07:23:41.898-03:00  INFO 7016 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-04T07:23:41.899-03:00  INFO 7016 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-04T07:23:41.899-03:00  INFO 7016 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-10-04T07:27:49.779-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/usuarios-api] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null] with root cause
+
+java.lang.IllegalArgumentException: The given id must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:182) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById(SimpleJpaRepository.java:198) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.9.jar:7.0.9]
+	at jdk.proxy4/jdk.proxy4.$Proxy160.deleteById(Unknown Source) ~[na:na]
+	at com.velsis.usuarios_api.service.UsuarioService.exluir(UsuarioService.java:111) ~[classes/:na]
+	at com.velsis.usuarios_api.resource.UsuarioResource.excluir(UsuarioResource.java:57) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:925) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:651) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:28:44.078-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T07:28:44.081-03:00  INFO 7016 --- [usuarios-api] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:28:46.086-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:28:46.086-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:28:46.091-03:00  INFO 7016 --- [usuarios-api] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:28:46.093-03:00  INFO 7016 --- [usuarios-api] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-04T07:28:46.099-03:00  INFO 7016 --- [usuarios-api] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-04T07:28:46.157-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:28:46.158-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:28:46.288-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:28:46.294-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:28:46.355-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:28:46.355-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:28:46.356-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:28:46.362-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 203 ms
+2026-10-04T07:28:46.395-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-2 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:28:46.395-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-04T07:28:46.398-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3af68c84
+2026-10-04T07:28:46.398-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-04T07:28:46.399-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:28:46.415-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:28:46.417-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:28:46.462-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:28:46.463-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:28:46.508-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:28:46.584-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:28:46.586-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:28:46.597-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:28:46.599-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.458 seconds (process running for 309.623)
+2026-10-04T07:28:46.601-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:28:55.127-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-04T07:28:55.127-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-04T07:28:55.128-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-04T07:28:55.186-03:00  WARN 7016 --- [usuarios-api] [http-nio-8181-exec-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1451, SQLState: 23000
+2026-10-04T07:28:55.186-03:00  WARN 7016 --- [usuarios-api] [http-nio-8181-exec-1] org.hibernate.orm.jdbc.error             : Cannot delete or update a parent row: a foreign key constraint fails (`usuarios`.`usuario`, CONSTRAINT `fk_usuario_endereco` FOREIGN KEY (`endereco_id`) REFERENCES `endereco` (`id`))
+2026-10-04T07:28:55.189-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/usuarios-api] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`usuarios`.`usuario`, CONSTRAINT `fk_usuario_endereco` FOREIGN KEY (`endereco_id`) REFERENCES `endereco` (`id`))] [delete from Endereco where id=?]; SQL [delete from Endereco where id=?]; constraint [fk_usuario_endereco]] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`usuarios`.`usuario`, CONSTRAINT `fk_usuario_endereco` FOREIGN KEY (`endereco_id`) REFERENCES `endereco` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:145) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:53) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:274) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.delete(AbstractDeleteCoordinator.java:85) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:119) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:634) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:505) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:386) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.internal.SessionImpl.fireFlush(SessionImpl.java:1472) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:498) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2100) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2021) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:426) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:167) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commitNoRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:252) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:242) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:89) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:552) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:687) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:408) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.9.jar:7.0.9]
+	at jdk.proxy5/jdk.proxy5.$Proxy177.deleteById(Unknown Source) ~[na:na]
+	at com.velsis.usuarios_api.service.UsuarioService.exluir(UsuarioService.java:111) ~[classes/:na]
+	at com.velsis.usuarios_api.resource.UsuarioResource.excluir(UsuarioResource.java:57) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:925) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:651) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:36:07.890-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T07:36:07.891-03:00  INFO 7016 --- [usuarios-api] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:36:09.895-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:36:09.895-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:36:09.897-03:00  INFO 7016 --- [usuarios-api] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:36:09.922-03:00  INFO 7016 --- [usuarios-api] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-04T07:36:09.924-03:00  INFO 7016 --- [usuarios-api] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-10-04T07:36:09.993-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:36:09.994-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:36:10.109-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:36:10.114-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:36:10.174-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:36:10.174-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:36:10.174-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:36:10.181-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 186 ms
+2026-10-04T07:36:10.209-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-3 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:36:10.209-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-04T07:36:10.212-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7509d81
+2026-10-04T07:36:10.212-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-04T07:36:10.213-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:36:10.228-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:36:10.230-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:36:10.269-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:36:10.270-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:36:10.313-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:36:10.380-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:36:10.382-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:36:10.391-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:36:10.393-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.412 seconds (process running for 753.437)
+2026-10-04T07:36:10.394-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:37:08.339-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T07:37:08.340-03:00  INFO 7016 --- [usuarios-api] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:37:10.343-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:37:10.343-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:37:10.345-03:00  INFO 7016 --- [usuarios-api] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:37:10.346-03:00  INFO 7016 --- [usuarios-api] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-04T07:37:10.346-03:00  INFO 7016 --- [usuarios-api] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-10-04T07:37:10.409-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:37:10.409-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:37:10.510-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:37:10.515-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:37:10.565-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:37:10.565-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:37:10.566-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:37:10.571-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 161 ms
+2026-10-04T07:37:10.595-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-4 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:37:10.595-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-04T07:37:10.599-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61650b71
+2026-10-04T07:37:10.599-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-04T07:37:10.599-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:37:10.615-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:37:10.616-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:37:10.657-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:37:10.657-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:37:10.695-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:37:10.757-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:37:10.759-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:37:10.767-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:37:10.769-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.372 seconds (process running for 813.591)
+2026-10-04T07:37:10.770-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:41:43.970-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 19 class path changes (1 addition, 0 deletions, 18 modifications)
+2026-10-04T07:41:43.971-03:00  INFO 7016 --- [usuarios-api] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:41:45.974-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:41:45.974-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:41:45.975-03:00  INFO 7016 --- [usuarios-api] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:41:45.976-03:00  INFO 7016 --- [usuarios-api] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-10-04T07:41:45.976-03:00  INFO 7016 --- [usuarios-api] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-10-04T07:41:46.038-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:41:46.038-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:41:46.143-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:41:46.149-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:41:46.208-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:41:46.208-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:41:46.208-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:41:46.214-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 175 ms
+2026-10-04T07:41:46.239-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-5 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:41:46.239-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-10-04T07:41:46.243-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47bc34c2
+2026-10-04T07:41:46.243-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-10-04T07:41:46.244-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:41:46.259-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:41:46.261-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:41:46.297-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:41:46.298-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:41:46.335-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:41:46.400-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:41:46.403-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:41:46.413-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:41:46.415-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.388 seconds (process running for 1089.232)
+2026-10-04T07:41:46.416-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:47:42.081-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T07:47:42.082-03:00  INFO 7016 --- [usuarios-api] [Thread-17] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:47:44.086-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:47:44.086-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:47:44.088-03:00  INFO 7016 --- [usuarios-api] [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:47:44.088-03:00  INFO 7016 --- [usuarios-api] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-10-04T07:47:44.089-03:00  INFO 7016 --- [usuarios-api] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-10-04T07:47:44.154-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:47:44.155-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:47:44.252-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:47:44.257-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:47:44.309-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:47:44.310-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:47:44.310-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:47:44.316-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 160 ms
+2026-10-04T07:47:44.344-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-6 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:47:44.344-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-10-04T07:47:44.348-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b82e7c9
+2026-10-04T07:47:44.348-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-10-04T07:47:44.348-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:47:44.365-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:47:44.366-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:47:44.403-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:47:44.404-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:47:44.436-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:47:44.494-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:47:44.496-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:47:44.504-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:47:44.506-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.362 seconds (process running for 1447.314)
+2026-10-04T07:47:44.506-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:49:52.723-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T07:49:52.723-03:00  INFO 7016 --- [usuarios-api] [Thread-21] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:49:54.726-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:49:54.726-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:49:54.728-03:00  INFO 7016 --- [usuarios-api] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:49:54.728-03:00  INFO 7016 --- [usuarios-api] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-10-04T07:49:54.729-03:00  INFO 7016 --- [usuarios-api] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-10-04T07:49:54.797-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:49:54.797-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:49:54.893-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:49:54.897-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:49:54.982-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:49:54.983-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:49:54.983-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:49:54.988-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 190 ms
+2026-10-04T07:49:55.012-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-7 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:49:55.012-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-10-04T07:49:55.015-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52f8a329
+2026-10-04T07:49:55.015-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-10-04T07:49:55.016-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:49:55.033-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:49:55.034-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:49:55.074-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:49:55.075-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:49:55.109-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:49:55.167-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:49:55.169-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:49:55.177-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:49:55.178-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.392 seconds (process running for 1577.984)
+2026-10-04T07:49:55.179-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:50:07.648-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T07:50:07.649-03:00  INFO 7016 --- [usuarios-api] [Thread-25] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:50:09.652-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:50:09.652-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:50:09.653-03:00  INFO 7016 --- [usuarios-api] [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:50:09.653-03:00  INFO 7016 --- [usuarios-api] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-10-04T07:50:09.654-03:00  INFO 7016 --- [usuarios-api] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-10-04T07:50:09.721-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:50:09.721-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:50:09.798-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:50:09.802-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:50:09.846-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:50:09.846-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:50:09.846-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:50:09.851-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 129 ms
+2026-10-04T07:50:09.877-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-8 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:50:09.878-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-10-04T07:50:09.881-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78abbc8
+2026-10-04T07:50:09.881-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-10-04T07:50:09.882-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:50:09.894-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:50:09.897-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:50:09.943-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:50:09.944-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:50:09.977-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:50:10.035-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:50:10.038-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:50:10.048-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:50:10.050-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.339 seconds (process running for 1592.854)
+2026-10-04T07:50:10.051-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:50:25.988-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-04T07:50:25.988-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-04T07:50:25.989-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-04T07:51:58.615-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/usuarios-api] threw exception [Request processing failed: com.velsis.usuarios_api.exception.UsuarioNaoEncontradoExcetion: Usuário com identificador 1 não foi encontrado.] with root cause
+
+com.velsis.usuarios_api.exception.UsuarioNaoEncontradoExcetion: Usuário com identificador 1 não foi encontrado.
+	at com.velsis.usuarios_api.service.UsuarioService.lambda$0(UsuarioService.java:113) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:407) ~[na:na]
+	at com.velsis.usuarios_api.service.UsuarioService.exluir(UsuarioService.java:112) ~[classes/:na]
+	at com.velsis.usuarios_api.resource.UsuarioResource.excluir(UsuarioResource.java:57) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:925) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:651) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:53:45.276-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/usuarios-api] threw exception [Request processing failed: org.springframework.dao.IncorrectResultSizeDataAccessException: Query did not return a unique result: 2 results were returned] with root cause
+
+org.hibernate.NonUniqueResultException: Query did not return a unique result: 2 results were returned
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:308) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResultOrNull(AbstractSelectionQuery.java:320) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:337) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:100) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:166) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:156) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:167) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:137) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.9.jar:7.0.9]
+	at jdk.proxy11/jdk.proxy11.$Proxy202.findByCep(Unknown Source) ~[na:na]
+	at com.velsis.usuarios_api.service.UsuarioService.validarEnderecoCepExistente(UsuarioService.java:69) ~[classes/:na]
+	at com.velsis.usuarios_api.service.UsuarioService.validarEndereco(UsuarioService.java:63) ~[classes/:na]
+	at com.velsis.usuarios_api.service.UsuarioService.validarUsuario(UsuarioService.java:49) ~[classes/:na]
+	at com.velsis.usuarios_api.service.UsuarioService.incluir(UsuarioService.java:37) ~[classes/:na]
+	at com.velsis.usuarios_api.resource.UsuarioResource.criar(UsuarioResource.java:41) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:55:12.227-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-exec-4] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/usuarios-api] threw exception [Request processing failed: org.springframework.dao.IncorrectResultSizeDataAccessException: Query did not return a unique result: 2 results were returned] with root cause
+
+org.hibernate.NonUniqueResultException: Query did not return a unique result: 2 results were returned
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:308) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResultOrNull(AbstractSelectionQuery.java:320) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:337) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:100) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:166) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:156) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:167) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:137) ~[spring-data-jpa-4.1.1.jar:4.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.9.jar:7.0.9]
+	at jdk.proxy11/jdk.proxy11.$Proxy202.findByCep(Unknown Source) ~[na:na]
+	at com.velsis.usuarios_api.service.UsuarioService.validarEnderecoCepExistente(UsuarioService.java:69) ~[classes/:na]
+	at com.velsis.usuarios_api.service.UsuarioService.validarEndereco(UsuarioService.java:63) ~[classes/:na]
+	at com.velsis.usuarios_api.service.UsuarioService.validarUsuario(UsuarioService.java:49) ~[classes/:na]
+	at com.velsis.usuarios_api.service.UsuarioService.incluir(UsuarioService.java:37) ~[classes/:na]
+	at com.velsis.usuarios_api.resource.UsuarioResource.criar(UsuarioResource.java:41) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:56:28.902-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-10-04T07:56:28.903-03:00  INFO 7016 --- [usuarios-api] [Thread-29] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:56:30.906-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:56:30.906-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:56:30.908-03:00  INFO 7016 --- [usuarios-api] [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:56:30.909-03:00  INFO 7016 --- [usuarios-api] [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-10-04T07:56:30.909-03:00  INFO 7016 --- [usuarios-api] [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-10-04T07:56:30.981-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:56:30.982-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:56:31.048-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:56:31.052-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:56:31.088-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:56:31.088-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:56:31.088-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:56:31.093-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 110 ms
+2026-10-04T07:56:31.121-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-9 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:56:31.121-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-10-04T07:56:31.125-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62fce465
+2026-10-04T07:56:31.125-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-10-04T07:56:31.126-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:56:31.140-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:56:31.143-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:56:31.178-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:56:31.178-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:56:31.226-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:56:31.296-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:56:31.299-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:56:31.307-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:56:31.309-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.337 seconds (process running for 1974.105)
+2026-10-04T07:56:31.310-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:57:11.911-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T07:57:11.912-03:00  INFO 7016 --- [usuarios-api] [Thread-33] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:57:13.915-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:57:13.915-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:57:13.916-03:00  INFO 7016 --- [usuarios-api] [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:57:13.917-03:00  INFO 7016 --- [usuarios-api] [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-10-04T07:57:13.917-03:00  INFO 7016 --- [usuarios-api] [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2026-10-04T07:57:14.025-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:57:14.025-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:57:14.094-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:57:14.098-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:57:14.136-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:57:14.137-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:57:14.137-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:57:14.145-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 119 ms
+2026-10-04T07:57:14.179-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-10 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:57:14.180-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2026-10-04T07:57:14.183-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fa3838e
+2026-10-04T07:57:14.183-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2026-10-04T07:57:14.184-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:57:14.194-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:57:14.195-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:57:14.227-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:57:14.228-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:57:14.263-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:57:14.313-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:57:14.315-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:57:14.321-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:57:14.322-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.308 seconds (process running for 2017.118)
+2026-10-04T07:57:14.323-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:57:21.363-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-04T07:57:21.363-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-04T07:57:21.364-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-04T07:57:47.825-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/usuarios-api] threw exception [Handler dispatch failed: java.lang.Error: Unresolved compilation problem: 
+	The method findByCep(String) is undefined for the type EnderecoRepository
+] with root cause
+
+java.lang.Error: Unresolved compilation problem: 
+	The method findByCep(String) is undefined for the type EnderecoRepository
+
+	at com.velsis.usuarios_api.service.UsuarioService.validarEnderecoCepInexistente(UsuarioService.java:82) ~[classes/:na]
+	at com.velsis.usuarios_api.service.UsuarioService.validarEndereco(UsuarioService.java:64) ~[classes/:na]
+	at com.velsis.usuarios_api.service.UsuarioService.validarUsuario(UsuarioService.java:49) ~[classes/:na]
+	at com.velsis.usuarios_api.service.UsuarioService.incluir(UsuarioService.java:37) ~[classes/:na]
+	at com.velsis.usuarios_api.resource.UsuarioResource.criar(UsuarioResource.java:41) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:58:32.221-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T07:58:32.222-03:00  INFO 7016 --- [usuarios-api] [Thread-37] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T07:58:34.225-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T07:58:34.225-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T07:58:34.226-03:00  INFO 7016 --- [usuarios-api] [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:58:34.227-03:00  INFO 7016 --- [usuarios-api] [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2026-10-04T07:58:34.228-03:00  INFO 7016 --- [usuarios-api] [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2026-10-04T07:58:34.303-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T07:58:34.304-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T07:58:34.401-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T07:58:34.406-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T07:58:34.445-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T07:58:34.446-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T07:58:34.446-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T07:58:34.454-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 150 ms
+2026-10-04T07:58:34.475-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-11 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T07:58:34.475-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2026-10-04T07:58:34.478-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40e067a
+2026-10-04T07:58:34.478-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2026-10-04T07:58:34.479-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T07:58:34.487-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T07:58:34.488-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T07:58:34.521-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T07:58:34.521-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T07:58:34.555-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T07:58:34.608-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T07:58:34.610-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T07:58:34.617-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T07:58:34.618-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.324 seconds (process running for 2097.412)
+2026-10-04T07:58:34.619-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T07:58:42.275-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-04T07:58:42.275-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-04T07:58:42.277-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-04T07:59:47.721-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/usuarios-api] threw exception [Request processing failed: com.velsis.usuarios_api.exception.UsuarioNaoEncontradoExcetion: Usuário com identificador 54 não foi encontrado.] with root cause
+
+com.velsis.usuarios_api.exception.UsuarioNaoEncontradoExcetion: Usuário com identificador 54 não foi encontrado.
+	at com.velsis.usuarios_api.service.UsuarioService.lambda$0(UsuarioService.java:113) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:407) ~[na:na]
+	at com.velsis.usuarios_api.service.UsuarioService.exluir(UsuarioService.java:112) ~[classes/:na]
+	at com.velsis.usuarios_api.resource.UsuarioResource.excluir(UsuarioResource.java:57) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:925) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:651) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T08:05:16.736-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T08:05:16.737-03:00  INFO 7016 --- [usuarios-api] [Thread-41] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T08:05:18.740-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T08:05:18.740-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T08:05:18.742-03:00  INFO 7016 --- [usuarios-api] [Thread-41] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:05:18.742-03:00  INFO 7016 --- [usuarios-api] [Thread-41] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2026-10-04T08:05:18.743-03:00  INFO 7016 --- [usuarios-api] [Thread-41] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2026-10-04T08:05:18.825-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T08:05:18.825-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T08:05:18.885-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T08:05:18.890-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T08:05:18.929-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T08:05:18.930-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T08:05:18.930-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T08:05:18.939-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 113 ms
+2026-10-04T08:05:18.960-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-12 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T08:05:18.961-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2026-10-04T08:05:18.963-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@36f71f56
+2026-10-04T08:05:18.963-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2026-10-04T08:05:18.964-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T08:05:18.971-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T08:05:18.973-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T08:05:19.002-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T08:05:19.002-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:05:19.035-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T08:05:19.084-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T08:05:19.086-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T08:05:19.094-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T08:05:19.095-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.28 seconds (process running for 2501.879)
+2026-10-04T08:05:19.124-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T08:05:21.526-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-04T08:05:21.526-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-04T08:05:21.527-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-04T08:05:21.543-03:00  WARN 7016 --- [usuarios-api] [http-nio-8181-exec-1] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioNaoEncontradoExcetion: Usuário com identificador 54 não foi encontrado.]
+2026-10-04T08:05:51.711-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T08:05:51.712-03:00  INFO 7016 --- [usuarios-api] [Thread-45] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T08:05:53.715-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T08:05:53.715-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T08:05:53.716-03:00  INFO 7016 --- [usuarios-api] [Thread-45] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:05:53.717-03:00  INFO 7016 --- [usuarios-api] [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2026-10-04T08:05:53.717-03:00  INFO 7016 --- [usuarios-api] [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2026-10-04T08:05:53.833-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T08:05:53.833-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T08:05:53.890-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T08:05:53.894-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T08:05:53.933-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T08:05:53.934-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T08:05:53.934-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T08:05:53.939-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 105 ms
+2026-10-04T08:05:53.964-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-13 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T08:05:53.965-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2026-10-04T08:05:53.968-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@639b8616
+2026-10-04T08:05:53.968-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2026-10-04T08:05:53.968-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T08:05:53.978-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T08:05:53.979-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T08:05:54.010-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T08:05:54.011-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:05:54.047-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T08:05:54.096-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T08:05:54.098-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T08:05:54.105-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T08:05:54.107-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.284 seconds (process running for 2536.89)
+2026-10-04T08:05:54.108-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T08:05:58.524-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T08:05:58.525-03:00  INFO 7016 --- [usuarios-api] [Thread-49] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T08:06:00.529-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T08:06:00.530-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T08:06:00.531-03:00  INFO 7016 --- [usuarios-api] [Thread-49] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:06:00.531-03:00  INFO 7016 --- [usuarios-api] [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2026-10-04T08:06:00.532-03:00  INFO 7016 --- [usuarios-api] [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2026-10-04T08:06:00.624-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T08:06:00.624-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T08:06:00.690-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T08:06:00.695-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T08:06:00.729-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T08:06:00.729-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T08:06:00.729-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T08:06:00.737-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 112 ms
+2026-10-04T08:06:00.762-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-14 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T08:06:00.762-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2026-10-04T08:06:00.766-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16725906
+2026-10-04T08:06:00.766-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2026-10-04T08:06:00.766-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T08:06:00.781-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T08:06:00.783-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T08:06:00.818-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T08:06:00.818-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:06:00.856-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T08:06:00.899-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T08:06:00.901-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T08:06:00.910-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T08:06:00.911-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.299 seconds (process running for 2543.694)
+2026-10-04T08:06:00.912-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T08:06:22.443-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T08:06:22.443-03:00  INFO 7016 --- [usuarios-api] [Thread-53] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T08:06:24.447-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T08:06:24.447-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T08:06:24.449-03:00  INFO 7016 --- [usuarios-api] [Thread-53] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:06:24.449-03:00  INFO 7016 --- [usuarios-api] [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2026-10-04T08:06:24.475-03:00  INFO 7016 --- [usuarios-api] [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2026-10-04T08:06:24.569-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T08:06:24.569-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T08:06:24.625-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T08:06:24.629-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T08:06:24.661-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T08:06:24.661-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T08:06:24.662-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T08:06:24.669-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 99 ms
+2026-10-04T08:06:24.694-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-15 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T08:06:24.694-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2026-10-04T08:06:24.698-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32636676
+2026-10-04T08:06:24.698-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2026-10-04T08:06:24.699-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T08:06:24.713-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T08:06:24.716-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T08:06:24.751-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T08:06:24.752-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:06:24.790-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T08:06:24.840-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T08:06:24.842-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T08:06:24.849-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T08:06:24.851-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.292 seconds (process running for 2567.633)
+2026-10-04T08:06:24.852-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T08:06:51.417-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T08:06:51.417-03:00  INFO 7016 --- [usuarios-api] [Thread-57] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T08:06:53.421-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T08:06:53.421-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T08:06:53.422-03:00  INFO 7016 --- [usuarios-api] [Thread-57] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:06:53.422-03:00  INFO 7016 --- [usuarios-api] [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2026-10-04T08:06:53.423-03:00  INFO 7016 --- [usuarios-api] [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2026-10-04T08:06:53.512-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T08:06:53.513-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T08:06:53.575-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T08:06:53.579-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T08:06:53.609-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T08:06:53.610-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T08:06:53.610-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T08:06:53.615-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 102 ms
+2026-10-04T08:06:53.637-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-16 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T08:06:53.638-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2026-10-04T08:06:53.641-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7005410a
+2026-10-04T08:06:53.641-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2026-10-04T08:06:53.642-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T08:06:53.653-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T08:06:53.654-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T08:06:53.688-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T08:06:53.689-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:06:53.717-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T08:06:53.767-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T08:06:53.769-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T08:06:53.778-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T08:06:53.780-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.277 seconds (process running for 2596.562)
+2026-10-04T08:06:53.781-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T08:13:25.818-03:00  INFO 7016 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-04T08:13:25.819-03:00  INFO 7016 --- [usuarios-api] [Thread-61] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-04T08:13:27.823-03:00  INFO 7016 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-04T08:13:27.823-03:00 ERROR 7016 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-10-04T08:13:27.825-03:00  INFO 7016 --- [usuarios-api] [Thread-61] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:13:27.825-03:00  INFO 7016 --- [usuarios-api] [Thread-61] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2026-10-04T08:13:27.826-03:00  INFO 7016 --- [usuarios-api] [Thread-61] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2026-10-04T08:13:27.917-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 7016 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-04T08:13:27.917-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-04T08:13:27.977-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-04T08:13:27.980-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2026-10-04T08:13:28.013-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-04T08:13:28.013-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-04T08:13:28.013-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-04T08:13:28.018-03:00  INFO 7016 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 100 ms
+2026-10-04T08:13:28.035-03:00  WARN 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-17 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-04T08:13:28.035-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2026-10-04T08:13:28.038-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ce3748
+2026-10-04T08:13:28.038-03:00  INFO 7016 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2026-10-04T08:13:28.038-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-04T08:13:28.049-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-04T08:13:28.051-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 26.7
+	Default catalog/schema: usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-04T08:13:28.083-03:00  INFO 7016 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-04T08:13:28.083-03:00  INFO 7016 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-04T08:13:28.114-03:00  WARN 7016 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-04T08:13:28.159-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-04T08:13:28.160-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-04T08:13:28.168-03:00  INFO 7016 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-04T08:13:28.170-03:00  INFO 7016 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.262 seconds (process running for 2990.942)
+2026-10-04T08:13:28.170-03:00  INFO 7016 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-04T08:13:44.873-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-04T08:13:44.873-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-04T08:13:44.873-03:00  INFO 7016 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-10-04T08:13:54.522-03:00  WARN 7016 --- [usuarios-api] [http-nio-8181-exec-2] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioNaoEncontradoExcetion: Usuário com identificador 53 não existe.]

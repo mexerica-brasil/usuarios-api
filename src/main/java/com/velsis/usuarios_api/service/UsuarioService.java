@@ -13,12 +13,14 @@ import com.velsis.usuarios_api.entity.Usuario;
 import com.velsis.usuarios_api.exception.EnderecoCepDuplicadoException;
 import com.velsis.usuarios_api.exception.EnderecoLogradouroDuplicadoException;
 import com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException;
+import com.velsis.usuarios_api.exception.UsuarioNaoEncontradoExcetion;
 import com.velsis.usuarios_api.repository.EnderecoRepository;
 import com.velsis.usuarios_api.repository.UsuarioRepository;
 
 @Service 
 public class UsuarioService {
     
+    private static final Integer MINIMO_USUARIO_MESMO_ENDERECO = 1; 
     @Autowired 
     private MessageSource message;
 
@@ -58,10 +60,6 @@ public class UsuarioService {
         }
     }
 
-    private void validarCpfValido() {
-        
-    }
-
     private void validarEndereco(Usuario usuario) {
         this.validarEnderecoCepExistente(usuario);
         this.validarEnderecoCepInexistente(usuario);
@@ -69,7 +67,7 @@ public class UsuarioService {
 
     private void validarEnderecoCepExistente(Usuario usuario) {
         Endereco endereco = usuario.getEndereco();
-        Endereco enderecoCep = repoEndereco.findByCep(usuario.getEndereco().getCep());
+        Endereco enderecoCep = repoEndereco.findAllByCep(usuario.getEndereco().getCep()).get(0);
 
         if (enderecoCep != null) {
             if (!endereco.getLogradouro().equals(enderecoCep.getLogradouro()) || !endereco.getCidade().equals(enderecoCep.getCidade())) {
@@ -82,7 +80,7 @@ public class UsuarioService {
 
     private void validarEnderecoCepInexistente(Usuario usuario) {
         Endereco endereco = usuario.getEndereco();
-        Endereco enderecoCep = repoEndereco.findByCep(endereco.getCep());
+        Endereco enderecoCep = repoEndereco.findAllByCep(endereco.getCep()).get(0);
 
         if (enderecoCep == null) {
             List<Endereco> enderecoLogradouro = repoEndereco.findByLogradouroAndCidade(endereco.getLogradouro(), endereco.getCidade());
@@ -99,7 +97,7 @@ public class UsuarioService {
 
     private Endereco confirmarEndereco(Usuario usuario) {
         Endereco endereco = usuario.getEndereco();
-        Endereco enderecoCep = repoEndereco.findByCep(usuario.getEndereco().getCep());
+        Endereco enderecoCep = repoEndereco.findAllByCep(usuario.getEndereco().getCep()).get(0);
 
         if (enderecoCep != null) {
             if (endereco.getLogradouro().equals(enderecoCep.getLogradouro()) && endereco.getCidade().equals(enderecoCep.getCidade())
@@ -109,5 +107,21 @@ public class UsuarioService {
         }
 
         return endereco;    
+    }
+
+    public void exluir(Integer id) {
+        Usuario usuario = repository.findById(id).orElseThrow(
+                                                    () -> new UsuarioNaoEncontradoExcetion(
+                                                                message.getMessage("service.usuario.nao.encontrado",
+                                                                                        new Object[] {id}, 
+                                                                                        LocaleContextHolder.getLocale())));
+        
+        List<Usuario> usuarios = repository.findAllByEndereco(usuario.getEndereco());
+
+        if (usuarios != null && usuarios.size() > MINIMO_USUARIO_MESMO_ENDERECO) {
+            usuario.setEndereco(null);
+        }                                                       
+
+        repository.delete(usuario);
     }
 }
