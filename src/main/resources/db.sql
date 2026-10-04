@@ -31,6 +31,6 @@ ALTER TABLE Usuario
 
 ALTER TABLE Endereco
     ADD CONSTRAINT uk_endereco
-    UNIQUE (logradouro, numero, cidade, cep);
+    UNIQUE (logradouro, numero, cidade, uf, cep);
 
 CREATE INDEX idx_usuario_nome ON Usuario(nome);  -- desnecessário

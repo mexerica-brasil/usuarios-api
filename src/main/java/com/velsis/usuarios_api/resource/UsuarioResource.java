@@ -21,6 +21,8 @@ import com.velsis.usuarios_api.service.UsuarioService;
 
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 
 @RestController 
@@ -55,5 +57,10 @@ public class UsuarioResource {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void excluir(@PathVariable Integer id) {
         service.exluir(id);
+    }
+
+    @PutMapping
+    public Usuario atualizar(@Valid @RequestBody Usuario usuario) {
+        return service.alterar(usuario);
     }
 }

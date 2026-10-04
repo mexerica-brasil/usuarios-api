@@ -11,4 +11,6 @@ public interface UsuarioRepository extends JpaRepository <Usuario, Integer> {
     public Usuario findByCpf(String cpf);
 
     public List<Usuario> findAllByEndereco(Endereco endereco);
+
+    public List<Usuario> findAllByEnderecoId(Integer id);
 }
