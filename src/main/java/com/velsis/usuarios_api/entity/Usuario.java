@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Objects;
 
+import org.hibernate.validator.constraints.br.CPF;
+
 import com.velsis.usuarios_api.enums.Constants;
 
 import jakarta.persistence.CascadeType;
@@ -33,6 +35,7 @@ public class Usuario {
     @Column(name = "id", nullable = false, unique = true)
     private Integer id;
 
+    @CPF 
     @NotNull
     @NotBlank
     @Size(min = 11, max = 11)  
