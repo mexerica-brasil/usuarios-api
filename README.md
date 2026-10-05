@@ -14,8 +14,6 @@ O projeto disponibiliza serviços HTTP para operações relacionadas ao cadastro
 - Exclusão de usuários
 - Validação dos dados de entrada
 - Persistência utilizando JPA
-- Controle de versionamento do banco de dados com Flyway
-- Monitoramento da aplicação através do Spring Boot Actuator
 - Exposição de API REST
 - Integração com banco de dados MySQL
 
@@ -53,10 +51,6 @@ Responsável pelo acesso e persistência dos dados através do Spring Data JPA.
 
 Representa as entidades persistidas no banco de dados.
 
-**DTO**
-
-Objetos utilizados para transportar dados entre a API e seus consumidores, evitando expor diretamente as entidades quando necessário.
-
 ---
 
 ## 🚀 Tecnologias
@@ -69,10 +63,7 @@ Objetos utilizados para transportar dados entre a API e seus consumidores, evita
 | Spring Data JPA | Persistência |
 | Hibernate | ORM |
 | MySQL | Banco de dados |
-| Flyway | Versionamento do banco |
 | Bean Validation | Validação |
-| Spring Boot Actuator | Monitoramento |
-| Lombok | Redução de código boilerplate |
 | Maven | Gerenciamento do projeto |
 | JUnit / Spring Boot Test | Testes |
 
@@ -113,17 +104,6 @@ Banco de dados utilizado pela aplicação.
 </dependency>
 ```
 
-### Flyway
-
-Utilizado para controle e versionamento das alterações do banco de dados.
-
-```xml
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-flyway</artifactId>
-</dependency>
-```
-
 ### Bean Validation
 
 Responsável pela validação dos dados recebidos pela API.
@@ -132,17 +112,6 @@ Responsável pela validação dos dados recebidos pela API.
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-validation</artifactId>
-</dependency>
-```
-
-### Actuator
-
-Disponibiliza endpoints para monitoramento e observabilidade da aplicação.
-
-```xml
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
 ```
 
@@ -182,52 +151,11 @@ Exemplo de configuração no `application.properties`:
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true
-spring.datasource.username=root
-spring.datasource.password=sua_senha
-
-spring.jpa.hibernate.ddl-auto=validate
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
+spring.datasource.username=velsis
+spring.datasource.password=velsis
 ```
 
 > As informações de acesso ao banco não devem ser versionadas no repositório.
-
----
-
-## 🗃️ Flyway
-
-As alterações estruturais do banco de dados devem ser controladas através de migrations do Flyway.
-
-Estrutura esperada:
-
-```text
-src/
-└── main/
-    └── resources/
-        └── db/
-            └── migration/
-                ├── V1__create_table_usuario.sql
-                ├── V2__add_column_usuario.sql
-                └── V3__create_table_endereco.sql
-```
-
-As migrations são executadas automaticamente durante a inicialização da aplicação.
-
-### Convenção
-
-Os arquivos devem seguir o padrão:
-
-```text
-V<versão>__<descricao>.sql
-```
-
-Exemplo:
-
-```text
-V1__create_table_usuario.sql
-V2__create_table_endereco.sql
-V3__add_unique_constraint_cpf.sql
-```
 
 ---
 
@@ -236,7 +164,7 @@ V3__add_unique_constraint_cpf.sql
 Clone o repositório:
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/mexerica-brasil/usuarios-api.git
 ```
 
 Entre no diretório:
@@ -266,7 +194,7 @@ java -jar target/usuarios-api-1.0.0.jar
 Por padrão, a aplicação será disponibilizada em:
 
 ```text
-http://localhost:8080
+http://localhost:8181
 ```
 
 ---
@@ -281,8 +209,8 @@ Exemplo de estrutura:
 |---|---|---|
 | `POST` | `/usuarios` | Cadastrar usuário |
 | `GET` | `/usuarios` | Listar usuários |
-| `GET` | `/usuarios/{id}` | Consultar usuário |
-| `PUT` | `/usuarios/{id}` | Atualizar usuário |
+| `GET` | `/usuarios/{cpf}` | Consultar usuário |
+| `PUT` | `/usuarios` | Atualizar usuário |
 | `DELETE` | `/usuarios/{id}` | Excluir usuário |
 
 ### Exemplo — cadastro
@@ -298,7 +226,7 @@ Exemplo de payload:
 {
     "nome": "João da Silva",
     "cpf": "12345678901",
-    "email": "joao.silva@email.com"
+    "dataNascimento" : "30/08/2004"
 }
 ```
 
@@ -320,74 +248,6 @@ private String email;
 ```
 
 Outras validações podem ser utilizadas conforme as regras de negócio.
-
----
-
-## 📊 Actuator
-
-O Spring Boot Actuator é utilizado para disponibilizar informações de monitoramento da aplicação.
-
-Exemplo:
-
-```text
-http://localhost:8080/actuator/health
-```
-
-Resposta esperada:
-
-```json
-{
-    "status": "UP"
-}
-```
-
-Os endpoints expostos pelo Actuator devem ser configurados de acordo com as necessidades e requisitos de segurança do ambiente.
-
----
-
-## 🧪 Testes
-
-Para executar os testes:
-
-```bash
-mvn test
-```
-
-Para executar o build completo:
-
-```bash
-mvn clean verify
-```
-
-Os testes devem contemplar, conforme a evolução do projeto:
-
-- Regras de negócio
-- Controllers
-- Services
-- Repositories
-- Validações
-- Integração com banco de dados
-
----
-
-## 🧹 Qualidade de código
-
-O projeto utiliza Lombok para reduzir código boilerplate.
-
-Exemplo:
-
-```java
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Entity
-public class Usuario {
-    // ...
-}
-```
-
-O uso de Lombok deve ser aplicado de forma criteriosa, principalmente em entidades JPA e objetos utilizados pela API.
 
 ---
 
@@ -423,48 +283,6 @@ usuarios-api/
 ├── .gitignore
 ├── pom.xml
 └── README.md
-```
-
----
-
-## 🔐 Configuração e segurança
-
-Informações sensíveis não devem ser armazenadas diretamente no código-fonte ou no repositório Git.
-
-Evite versionar:
-
-```text
-spring.datasource.password
-```
-
-senhas, tokens, chaves de API e outras credenciais.
-
-Para ambientes diferentes, recomenda-se utilizar variáveis de ambiente ou arquivos de configuração específicos.
-
-Exemplo:
-
-```properties
-spring.datasource.username=${DB_USERNAME}
-spring.datasource.password=${DB_PASSWORD}
-```
-
----
-
-## 🌎 Ambientes
-
-A aplicação pode utilizar diferentes configurações para cada ambiente:
-
-```text
-application.properties
-application-dev.properties
-application-test.properties
-application-prod.properties
-```
-
-Exemplo:
-
-```bash
-mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
 ---
@@ -531,7 +349,7 @@ target/usuarios-api-1.0.0.jar
 A aplicação pode ser executada como um arquivo JAR:
 
 ```bash
-java -jar target/usuarios-api-1.0.0.jar
+java -jar target/usuarios-api-0.0.1.jar
 ```
 
 Em ambientes de produção, recomenda-se utilizar um processo de deploy automatizado e separar as configurações de cada ambiente.

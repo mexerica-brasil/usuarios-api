@@ -26,6 +26,14 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Size;
 
+/**
+ * 
+ * Usuario
+ * 
+ * Essa entity armazena dados de usuario
+ * Não pode existir mais de um usuário com o mesmo CPF
+ * 
+ */
 @Entity 
 @Table(name = "Usuario")
 public class Usuario {
@@ -68,11 +76,13 @@ public class Usuario {
     protected void onCreate() {
         dataCriacao = LocalDateTime.now(ZoneId.systemDefault());
         dataUltimaAlteracao = LocalDateTime.now(ZoneId.systemDefault());
+        this.removerFormatacaoCpf();
     }
 
     @PreUpdate
     protected void onUpdate() {
         dataUltimaAlteracao = LocalDateTime.now(ZoneId.systemDefault());
+        this.removerFormatacaoCpf();
     }
 
     public Integer getId() { return id; }
@@ -95,6 +105,14 @@ public class Usuario {
 
     public Endereco getEndereco() { return endereco; }
     public void setEndereco(Endereco endereco) { this.endereco = endereco; }
+
+    private String removerFormatacaoCpf() {
+        if (this.cpf == null) {
+            return null;
+        }
+
+        return this.cpf.replaceAll("\\D", "");
+    }
 
     @Override
 	public String toString() {

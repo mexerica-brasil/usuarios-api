@@ -12,8 +12,17 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
+/**
+ * 
+ * Endereco
+ * 
+ * Essa entity armazena dados de endereco
+ * Um endereço não pode se repetir com exceção de o número for diferente
+ * 
+ */
 @Entity 
 @Table 
 public class Endereco {
@@ -42,6 +51,7 @@ public class Endereco {
     @NotBlank 
     @NotNull
     @Size(min = 2, max = 2)  
+    @Pattern (regexp = "^\\d{5}-\\d{3}$")
     @Column(name = "uf", nullable = false, length = 2)
     private String uf;
 

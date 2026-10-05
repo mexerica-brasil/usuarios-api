@@ -21,6 +21,13 @@ import com.velsis.usuarios_api.repository.UsuarioRepository;
 
 import jakarta.transaction.Transactional;
 
+/**
+ * 
+ * UsuarioService
+ * 
+ * Regras do negócio
+ * 
+ */
 @Service 
 public class UsuarioService {
 
@@ -41,6 +48,16 @@ public class UsuarioService {
         return repository.findAll(Sort.by(Sort.Direction.ASC, "nome"));
     }
 
+    /**
+     * 
+     * Inclusão de usuários
+     * 
+     * Não pode incluir usuários com mesmo CPF
+     * Não pode incluir usuário cujo endereço não seja validado (mesmo cep, logradouro diferente)
+     * 
+     * @param usuario
+     * @return
+     */
     @Transactional 
     public Usuario incluir(Usuario usuario) {
         this.validarUsuario(usuario);
@@ -57,6 +74,14 @@ public class UsuarioService {
         this.validarCpf(usuario);    
         this.validarEndereco(usuario);    
     }
+
+    /**
+     * 
+     * Validação do CPF
+     * Não pode incluir usuários com mesmo CPF
+     * 
+     * @param usuario
+     */
 
     private void validarCpf(Usuario usuario) {
         Usuario usuarioCpf = repository.findByCpf(usuario.getCpf());
@@ -75,6 +100,14 @@ public class UsuarioService {
         }
     }
 
+    /**
+     * 
+     * Validar endereço pelo CEP
+     * 
+     * Não deixar incluir mesmo CEP para logradouros diferentes
+     * 
+     * @param usuario
+     */
     private void validarEnderecoCepExistente(Usuario usuario) {
         Endereco endereco = usuario.getEndereco();
 
@@ -92,6 +125,13 @@ public class UsuarioService {
         }
     }
 
+    /**
+     * 
+     * Validar endereço pelo CEP
+     * Não deixar incluir mesmo CEP para logradouros diferentes
+     * 
+     * @param usuario
+     */
     private void validarEnderecoCepInexistente(Usuario usuario) {
         Endereco endereco = usuario.getEndereco();
         List<Endereco> enderecosCep = repoEndereco.findAllByCep(endereco.getCep());
@@ -110,6 +150,15 @@ public class UsuarioService {
         }
     }
 
+    /**
+     * 
+     * Evitar duplicidade de logradouros
+     * Se tentar incluir endereço já cadastrado, então usa esse
+     * Caso o logradouro seja o mesmo mas o número seja diferente, deixa inserir um novo endereço
+     * 
+     * @param usuario
+     * @return
+     */
     private Endereco confirmarEndereco(Usuario usuario) {
         if (usuario.getEndereco() == null) {
             return null;
@@ -123,6 +172,8 @@ public class UsuarioService {
 
         if (enderecosCep != null && !enderecosCep.isEmpty()) {
             for (Endereco enderecoCep : enderecosCep) {
+
+                // Usa se for mesmo número
                if (endereco.getLogradouro().equals(enderecoCep.getLogradouro()) && endereco.getCidade().equals(enderecoCep.getCidade())
                     && endereco.getUf().equals(enderecoCep.getUf())
                     && endereco.getNumero().equals(enderecoCep.getNumero()) ) {
@@ -141,6 +192,7 @@ public class UsuarioService {
         
         List<Usuario> usuarios = repository.findAllByEndereco(usuario.getEndereco());
 
+        // Não deixa excluir endereço que esteja vinculado a mais de um usuário
         if (usuarios != null && usuarios.size() > MINIMO_USUARIO_MESMO_ENDERECO) {
             usuario.setEndereco(null);
         }                                                       
@@ -180,6 +232,7 @@ public class UsuarioService {
 
         Usuario usuarioNovo = repository.save(usuario);
 
+        // Se excluir usuário, deve excluir seu endereço desde que não esteja vínculado a outro usuário
         if (idEnderecoUsuarioSalvo != null && !idEnderecoUsuarioSalvo.equals(usuarioNovo.getEndereco().getId())) {
             List<Usuario> usuariosEnderecoId = repository.findAllByEnderecoId(idEnderecoUsuarioSalvo);
 
