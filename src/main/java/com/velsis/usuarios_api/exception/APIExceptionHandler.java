@@ -8,12 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -57,4 +59,15 @@ public class APIExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, erros, headers, status, request);
     }
 
+    @ExceptionHandler({EnderecoCepDuplicadoException.class, EnderecoLogradouroDuplicadoException.class,
+        UsuarioCpfDataNascimentoNaoAlteravelException.class, UsuarioCpfDuplicadoException.class, UsuarioIdNaoInformadoException.class,
+        UsuarioNaoEncontradoExcetion.class
+    }) 
+    public ResponseEntity<Object> handleBusinessException(RuntimeException ex, WebRequest request) {
+		String detail = ex.getMessage();
+		String mensagemUsuario = ex.getMessage();
+		String mensagemDesenvolvedor = ex.getCause() != null ? ex.getCause().getMessage() : ex.getMessage();
+		Problem problem = new Problem(HttpStatus.BAD_REQUEST.value(), ProblemType.DADOS_INVALIDOS.getTitle(), detail, mensagemUsuario, mensagemDesenvolvedor);
+		return handleExceptionInternal(ex, problem, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
+	}
 }
