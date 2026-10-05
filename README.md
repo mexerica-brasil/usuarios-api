@@ -147,6 +147,8 @@ Crie o banco de dados:
 CREATE DATABASE usuarios;
 ```
 
+Para criar as tabelas do sistema obtenha o script de criação em src/main/resources/db.sql e execute no client database
+
 Exemplo de configuração no `application.properties`:
 
 ```properties
