@@ -1,77 +1,196 @@
-2026-10-05T13:35:07.581-03:00  INFO 20770 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 20770 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T13:35:07.588-03:00  INFO 20770 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T13:35:07.640-03:00  INFO 20770 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-10-05T13:35:07.640-03:00  INFO 20770 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-10-05T13:35:08.502-03:00  INFO 20770 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T13:35:08.598-03:00  INFO 20770 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
-2026-10-05T13:35:09.255-03:00  INFO 20770 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
-2026-10-05T13:35:09.272-03:00  INFO 20770 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-05T13:35:09.273-03:00  INFO 20770 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-05T13:35:09.315-03:00  INFO 20770 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1674 ms
-2026-10-05T13:35:09.588-03:00  WARN 20770 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T13:35:09.588-03:00  INFO 20770 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T13:35:09.759-03:00  INFO 20770 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34518418
-2026-10-05T13:35:09.762-03:00  INFO 20770 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T13:35:09.793-03:00  INFO 20770 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T13:35:09.871-03:00  INFO 20770 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T13:35:10.344-03:00  INFO 20770 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T13:35:10.441-03:00  INFO 20770 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T13:35:11.312-03:00  INFO 20770 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T13:35:11.319-03:00  INFO 20770 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T13:35:11.444-03:00  INFO 20770 --- [usuarios-api] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T13:35:11.745-03:00  WARN 20770 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T13:35:12.376-03:00  INFO 20770 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T13:35:12.397-03:00  INFO 20770 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T13:35:12.472-03:00  WARN 20770 --- [usuarios-api] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-10-05T13:35:12.476-03:00  INFO 20770 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T13:35:12.479-03:00  INFO 20770 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T13:35:12.490-03:00  INFO 20770 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T13:35:12.504-03:00  INFO 20770 --- [usuarios-api] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-10-06T14:57:52.130-03:00  INFO 11541 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 11541 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-06T14:57:52.137-03:00  INFO 11541 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-06T14:57:52.189-03:00  INFO 11541 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-06T14:57:52.189-03:00  INFO 11541 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-06T14:57:53.071-03:00  INFO 11541 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T14:57:53.133-03:00  INFO 11541 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2026-10-06T14:57:53.782-03:00  INFO 11541 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-06T14:57:53.795-03:00  INFO 11541 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T14:57:53.795-03:00  INFO 11541 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06T14:57:53.830-03:00  INFO 11541 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1641 ms
+2026-10-06T14:57:54.097-03:00  WARN 11541 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-06T14:57:54.097-03:00  INFO 11541 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T14:57:55.245-03:00  INFO 11541 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06T14:57:55.307-03:00  INFO 11541 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-06T14:57:55.787-03:00  INFO 11541 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T14:57:55.834-03:00  INFO 11541 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T14:57:56.841-03:00  WARN 11541 --- [usuarios-api] [restartedMain] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 08S01
+2026-10-06T14:57:56.841-03:00  WARN 11541 --- [usuarios-api] [restartedMain] org.hibernate.orm.jdbc.error             : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2026-10-06T14:57:56.842-03:00  WARN 11541 --- [usuarios-api] [restartedMain] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.JDBCConnectionException: Unable to obtain isolated JDBC connection [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:80) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:180) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1388) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1468) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1450) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.velsis.usuarios_api.UsuariosApiApplication.main(UsuariosApiApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:149) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	... 40 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:642) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:555) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:599) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:668) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	... 56 common frames omitted
+
+2026-10-06T14:57:56.848-03:00 ERROR 11541 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-10-06T14:57:56.849-03:00  WARN 11541 --- [usuarios-api] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-10-06T14:57:56.854-03:00  INFO 11541 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-06T14:57:56.867-03:00  INFO 11541 --- [usuarios-api] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-10-05T13:35:12.521-03:00 ERROR 20770 --- [usuarios-api] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2026-10-06T14:57:56.879-03:00 ERROR 11541 --- [usuarios-api] [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
-***************************
-APPLICATION FAILED TO START
-***************************
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.velsis.usuarios_api.UsuariosApiApplication.main(UsuariosApiApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:180) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1388) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1468) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1450) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 18 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.4.5.Final.jar:7.4.5.Final]
+	... 34 common frames omitted
 
-Description:
-
-Web server failed to start. Port 8181 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8181 or configure this application to listen on another port.
-
-2026-10-05T13:36:44.556-03:00  INFO 20971 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 20971 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T13:36:44.558-03:00  INFO 20971 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T13:36:44.604-03:00  INFO 20971 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-10-05T13:36:44.604-03:00  INFO 20971 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-10-05T13:36:45.483-03:00  INFO 20971 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T13:36:45.535-03:00  INFO 20971 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
-2026-10-05T13:36:46.118-03:00  INFO 20971 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
-2026-10-05T13:36:46.133-03:00  INFO 20971 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-05T13:36:46.133-03:00  INFO 20971 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-05T13:36:46.164-03:00  INFO 20971 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1560 ms
-2026-10-05T13:36:46.391-03:00  WARN 20971 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T13:36:46.391-03:00  INFO 20971 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T13:36:46.536-03:00  INFO 20971 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b12bc63
-2026-10-05T13:36:46.538-03:00  INFO 20971 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T13:36:46.567-03:00  INFO 20971 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T13:36:46.619-03:00  INFO 20971 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T13:36:47.000-03:00  INFO 20971 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T13:36:47.083-03:00  INFO 20971 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-10-06T15:01:20.645-03:00  INFO 12079 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 12079 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-06T15:01:20.648-03:00  INFO 12079 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-06T15:01:20.699-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-06T15:01:20.699-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-06T15:01:21.500-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T15:01:21.554-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2026-10-06T15:01:22.224-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-06T15:01:22.239-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T15:01:22.240-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06T15:01:22.273-03:00  INFO 12079 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1573 ms
+2026-10-06T15:01:22.512-03:00  WARN 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-06T15:01:22.512-03:00  INFO 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T15:01:22.734-03:00  INFO 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ff4595a
+2026-10-06T15:01:22.736-03:00  INFO 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T15:01:22.782-03:00  INFO 12079 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06T15:01:22.857-03:00  INFO 12079 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-06T15:01:23.273-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T15:01:23.376-03:00  INFO 12079 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -83,70 +202,22 @@ Identify and stop the process that's listening on port 8181 or configure this ap
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-10-05T13:36:47.846-03:00  INFO 20971 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T13:36:47.853-03:00  INFO 20971 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T13:36:47.978-03:00  INFO 20971 --- [usuarios-api] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T13:36:48.232-03:00  WARN 20971 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T13:36:48.868-03:00  INFO 20971 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T13:36:48.895-03:00  INFO 20971 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T13:36:48.985-03:00  INFO 20971 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
-2026-10-05T13:36:48.995-03:00  INFO 20971 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 4.835 seconds (process running for 5.486)
-2026-10-05T13:36:51.512-03:00  INFO 20971 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-05T13:36:51.512-03:00  INFO 20971 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-05T13:36:51.513-03:00  INFO 20971 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-10-05T13:39:41.289-03:00  WARN 20971 --- [usuarios-api] [http-nio-8181-exec-4] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T13:40:38.282-03:00  WARN 20971 --- [usuarios-api] [http-nio-8181-exec-6] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T13:42:51.765-03:00  INFO 20971 --- [usuarios-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-05T13:42:53.773-03:00  INFO 20971 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-05T13:42:53.779-03:00  INFO 20971 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T13:42:53.782-03:00  INFO 20971 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T13:42:53.787-03:00  INFO 20971 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T13:44:31.906-03:00  INFO 22375 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 22375 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T13:44:31.909-03:00  INFO 22375 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T13:44:31.962-03:00  INFO 22375 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-10-05T13:44:31.962-03:00  INFO 22375 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-10-05T13:44:32.732-03:00  INFO 22375 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T13:44:32.783-03:00  INFO 22375 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
-2026-10-05T13:44:33.437-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
-2026-10-05T13:44:33.450-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-05T13:44:33.450-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-05T13:44:33.480-03:00  INFO 22375 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1517 ms
-2026-10-05T13:44:33.724-03:00  WARN 22375 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T13:44:33.724-03:00  INFO 22375 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T13:44:33.894-03:00  INFO 22375 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ff6334c
-2026-10-05T13:44:33.896-03:00  INFO 22375 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T13:44:33.926-03:00  INFO 22375 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T13:44:34.014-03:00  INFO 22375 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T13:44:34.477-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T13:44:34.563-03:00  INFO 22375 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T13:44:35.317-03:00  INFO 22375 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T13:44:35.323-03:00  INFO 22375 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T13:44:35.410-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T13:44:35.646-03:00  WARN 22375 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T13:44:36.176-03:00  INFO 22375 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T13:44:36.195-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T13:44:36.269-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
-2026-10-05T13:44:36.277-03:00  INFO 22375 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 4.785 seconds (process running for 5.389)
-2026-10-05T13:44:38.841-03:00  INFO 22375 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-05T13:44:38.841-03:00  INFO 22375 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-05T13:44:38.842-03:00  INFO 22375 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-05T13:46:06.618-03:00  WARN 22375 --- [usuarios-api] [http-nio-8181-exec-2] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T13:46:44.441-03:00  WARN 22375 --- [usuarios-api] [http-nio-8181-exec-3] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T13:55:15.017-03:00  INFO 22375 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-10-05T13:55:15.020-03:00  INFO 22375 --- [usuarios-api] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-05T13:55:17.027-03:00  INFO 22375 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-05T13:55:17.027-03:00 ERROR 22375 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+2026-10-06T15:01:24.176-03:00  INFO 12079 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T15:01:24.182-03:00  INFO 12079 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T15:01:24.342-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06T15:01:24.640-03:00  WARN 12079 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T15:01:25.225-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-06T15:01:25.251-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-06T15:01:25.353-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-06T15:01:25.360-03:00  INFO 12079 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 5.063 seconds (process running for 5.819)
+2026-10-06T15:01:27.604-03:00  INFO 12079 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-06T15:01:27.605-03:00  INFO 12079 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-06T15:01:27.607-03:00  INFO 12079 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-06T15:01:46.977-03:00  WARN 12079 --- [usuarios-api] [http-nio-8181-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.velsis.usuarios_api.entity.Usuario> com.velsis.usuarios_api.resource.UsuarioResource.criar(com.velsis.usuarios_api.entity.Usuario,jakarta.servlet.http.HttpServletResponse): [Field error in object 'usuario' on field 'endereco.uf': rejected value [PR]; codes [Pattern.usuario.endereco.uf,Pattern.endereco.uf,Pattern.uf,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.endereco.uf,endereco.uf]; arguments []; default message [endereco.uf],[Ljakarta.validation.constraints.Pattern$Flag;@13059810,^\d{5}-\d{3}$]; default message [{0} deve ter o formato "99999-999".]] ]
+2026-10-06T15:03:32.300-03:00  INFO 12079 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-06T15:03:32.304-03:00  INFO 12079 --- [usuarios-api] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06T15:03:34.312-03:00  INFO 12079 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-06T15:03:34.312-03:00 ERROR 12079 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
 
 java.nio.channels.AsynchronousCloseException
 	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
@@ -157,24 +228,24 @@ java.nio.channels.AsynchronousCloseException
 	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
 	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
 
-2026-10-05T13:55:17.034-03:00  INFO 22375 --- [usuarios-api] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T13:55:17.037-03:00  INFO 22375 --- [usuarios-api] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T13:55:17.042-03:00  INFO 22375 --- [usuarios-api] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T13:55:17.128-03:00  INFO 22375 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 22375 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T13:55:17.128-03:00  INFO 22375 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T13:55:17.335-03:00  INFO 22375 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T13:55:17.344-03:00  INFO 22375 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
-2026-10-05T13:55:17.448-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
-2026-10-05T13:55:17.449-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-05T13:55:17.449-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-05T13:55:17.458-03:00  INFO 22375 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 328 ms
-2026-10-05T13:55:17.502-03:00  WARN 22375 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-2 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T13:55:17.502-03:00  INFO 22375 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2026-10-05T13:55:17.506-03:00  INFO 22375 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64134730
-2026-10-05T13:55:17.507-03:00  INFO 22375 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2026-10-05T13:55:17.508-03:00  INFO 22375 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T13:55:17.530-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T13:55:17.533-03:00  INFO 22375 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-10-06T15:03:34.320-03:00  INFO 12079 --- [usuarios-api] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T15:03:34.323-03:00  INFO 12079 --- [usuarios-api] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-06T15:03:34.326-03:00  INFO 12079 --- [usuarios-api] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-06T15:03:34.419-03:00  INFO 12079 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 12079 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-06T15:03:34.420-03:00  INFO 12079 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-06T15:03:34.600-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T15:03:34.609-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2026-10-06T15:03:34.688-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-06T15:03:34.689-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T15:03:34.690-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06T15:03:34.698-03:00  INFO 12079 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 276 ms
+2026-10-06T15:03:34.748-03:00  WARN 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-2 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-06T15:03:34.748-03:00  INFO 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-06T15:03:34.756-03:00  INFO 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38fcac5d
+2026-10-06T15:03:34.757-03:00  INFO 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-06T15:03:34.758-03:00  INFO 12079 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06T15:03:34.784-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T15:03:34.787-03:00  INFO 12079 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -186,156 +257,21 @@ java.nio.channels.AsynchronousCloseException
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-10-05T13:55:17.594-03:00  INFO 22375 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T13:55:17.594-03:00  INFO 22375 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T13:55:17.651-03:00  WARN 22375 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T13:55:17.743-03:00  INFO 22375 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T13:55:17.746-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T13:55:17.760-03:00  INFO 22375 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
-2026-10-05T13:55:17.762-03:00  INFO 22375 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.654 seconds (process running for 646.862)
-2026-10-05T13:55:17.765-03:00  INFO 22375 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-10-05T13:55:50.114-03:00  INFO 22375 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-05T13:55:50.114-03:00  INFO 22375 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-05T13:55:50.115-03:00  INFO 22375 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-05T13:55:50.138-03:00  WARN 22375 --- [usuarios-api] [http-nio-8181-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T13:57:19.638-03:00  INFO 23907 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 23907 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T13:57:19.640-03:00  INFO 23907 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T13:57:19.684-03:00  INFO 23907 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-10-05T13:57:19.684-03:00  INFO 23907 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-10-05T13:57:20.547-03:00  INFO 23907 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T13:57:20.603-03:00  INFO 23907 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
-2026-10-05T13:57:21.237-03:00  INFO 23907 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
-2026-10-05T13:57:21.250-03:00  INFO 23907 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-05T13:57:21.251-03:00  INFO 23907 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-05T13:57:21.280-03:00  INFO 23907 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1596 ms
-2026-10-05T13:57:21.491-03:00  WARN 23907 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T13:57:21.491-03:00  INFO 23907 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T13:57:21.654-03:00  INFO 23907 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ff6334c
-2026-10-05T13:57:21.656-03:00  INFO 23907 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T13:57:21.684-03:00  INFO 23907 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T13:57:21.743-03:00  INFO 23907 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T13:57:22.125-03:00  INFO 23907 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T13:57:22.204-03:00  INFO 23907 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T13:57:22.924-03:00  INFO 23907 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T13:57:22.930-03:00  INFO 23907 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T13:57:23.026-03:00  INFO 23907 --- [usuarios-api] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T13:57:23.253-03:00  WARN 23907 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T13:57:23.837-03:00  INFO 23907 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T13:57:23.860-03:00  INFO 23907 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T13:57:23.945-03:00  INFO 23907 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
-2026-10-05T13:57:24.006-03:00  INFO 23907 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 4.753 seconds (process running for 5.362)
-2026-10-05T13:57:26.677-03:00  INFO 23907 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-05T13:57:26.678-03:00  INFO 23907 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-05T13:57:26.679-03:00  INFO 23907 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-05T13:58:44.560-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T14:07:32.311-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T14:14:19.430-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T14:15:30.438-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T14:17:56.972-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T14:20:09.274-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.EnderecoLogradouroDuplicadoException: O endereço Rua Cambe da cidade Londrina e estado PR já está cadastrado com o Cep 80700-000.]
-2026-10-05T14:23:24.962-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDuplicadoException: Já existe o usuário Paulo cadastrado com o Cpf 61680738500 informado.]
-2026-10-05T14:24:01.948-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.EnderecoLogradouroDuplicadoException: O endereço Rua Cambe da cidade Londrina e estado PR já está cadastrado com o Cep 80700-000.]
-2026-10-05T14:31:29.377-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.EnderecoCepDuplicadoException: Cep já cadastrado para endereço Rua Cambe da cidade Londrina;]
-2026-10-05T14:55:59.529-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDataNascimentoNaoAlteravelException: Não é permitido alterar o Cpf e a Data de Nascimento do usuário Camila Mota Sebrian.]
-2026-10-05T14:56:14.468-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDataNascimentoNaoAlteravelException: Não é permitido alterar o Cpf e a Data de Nascimento do usuário Camila Mota Sebrian.]
-2026-10-05T14:56:26.748-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDataNascimentoNaoAlteravelException: Não é permitido alterar o Cpf e a Data de Nascimento do usuário Camila Mota Sebrian.]
-2026-10-05T14:56:35.992-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDataNascimentoNaoAlteravelException: Não é permitido alterar o Cpf e a Data de Nascimento do usuário Camila Mota Sebrian.]
-2026-10-05T14:57:00.424-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.UsuarioCpfDataNascimentoNaoAlteravelException: Não é permitido alterar o Cpf e a Data de Nascimento do usuário Camila Mota Sebrian.]
-2026-10-05T14:57:33.442-03:00  WARN 23907 --- [usuarios-api] [http-nio-8181-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.velsis.usuarios_api.exception.EnderecoLogradouroDuplicadoException: O endereço Rua Justo Manfron da cidade Curitiba e estado PR já está cadastrado com o Cep 82410-540.]
-2026-10-05T15:23:52.533-03:00  WARN 23907 --- [usuarios-api] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s785ms), soft-evicting connections from pool.
-2026-10-05T15:53:45.211-03:00  INFO 23907 --- [usuarios-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-05T15:53:47.220-03:00  INFO 23907 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-05T15:53:47.225-03:00  INFO 23907 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T15:53:47.228-03:00  INFO 23907 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T15:53:47.229-03:00  INFO 23907 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T16:47:30.147-03:00  INFO 54209 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Starting UsuariosApiApplicationTests using Java 26.0.1 with PID 54209 (started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T16:47:30.149-03:00  INFO 54209 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T16:47:30.803-03:00  INFO 54209 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T16:47:30.843-03:00  INFO 54209 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
-2026-10-05T16:47:31.286-03:00  WARN 54209 --- [usuarios-api] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T16:47:31.286-03:00  INFO 54209 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T16:47:31.449-03:00  INFO 54209 --- [usuarios-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6697f3d
-2026-10-05T16:47:31.452-03:00  INFO 54209 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T16:47:31.482-03:00  INFO 54209 --- [usuarios-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T16:47:31.550-03:00  INFO 54209 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T16:47:31.955-03:00  INFO 54209 --- [usuarios-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T16:47:32.031-03:00  INFO 54209 --- [usuarios-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T16:47:32.820-03:00  INFO 54209 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T16:47:32.825-03:00  INFO 54209 --- [usuarios-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T16:47:32.903-03:00  INFO 54209 --- [usuarios-api] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T16:47:33.143-03:00  WARN 54209 --- [usuarios-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T16:47:33.666-03:00  INFO 54209 --- [usuarios-api] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T16:47:33.687-03:00  INFO 54209 --- [usuarios-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T16:47:33.745-03:00  INFO 54209 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Started UsuariosApiApplicationTests in 3.877 seconds (process running for 4.879)
-2026-10-05T16:47:34.199-03:00  INFO 54209 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T16:47:34.202-03:00  INFO 54209 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T16:47:34.207-03:00  INFO 54209 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T17:01:12.744-03:00  INFO 54870 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 54870 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:01:12.746-03:00  INFO 54870 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:01:12.789-03:00  INFO 54870 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-10-05T17:01:12.789-03:00  INFO 54870 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-10-05T17:01:13.540-03:00  INFO 54870 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:01:13.589-03:00  INFO 54870 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:01:14.208-03:00  INFO 54870 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
-2026-10-05T17:01:14.218-03:00  INFO 54870 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-05T17:01:14.218-03:00  INFO 54870 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-05T17:01:14.244-03:00  INFO 54870 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1455 ms
-2026-10-05T17:01:14.456-03:00  WARN 54870 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:01:14.456-03:00  INFO 54870 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T17:01:14.586-03:00  INFO 54870 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29121549
-2026-10-05T17:01:14.588-03:00  INFO 54870 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T17:01:14.615-03:00  INFO 54870 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:01:14.665-03:00  INFO 54870 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T17:01:15.030-03:00  INFO 54870 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:01:15.102-03:00  INFO 54870 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T17:01:15.761-03:00  INFO 54870 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:01:15.766-03:00  INFO 54870 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:01:15.849-03:00  INFO 54870 --- [usuarios-api] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T17:01:16.062-03:00  WARN 54870 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:01:16.553-03:00  INFO 54870 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:01:16.574-03:00  INFO 54870 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:01:16.654-03:00  INFO 54870 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
-2026-10-05T17:01:16.661-03:00  INFO 54870 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 4.243 seconds (process running for 4.775)
-2026-10-05T17:01:16.919-03:00  INFO 54870 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-05T17:01:16.919-03:00  INFO 54870 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-05T17:01:16.921-03:00  INFO 54870 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-10-05T17:06:13.727-03:00  INFO 54870 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 25 class path changes (0 additions, 25 deletions, 0 modifications)
-2026-10-05T17:06:13.731-03:00  INFO 54870 --- [usuarios-api] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-05T17:06:15.740-03:00  INFO 54870 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-05T17:06:15.740-03:00 ERROR 54870 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+2026-10-06T15:03:34.867-03:00  INFO 12079 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T15:03:34.867-03:00  INFO 12079 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T15:03:34.978-03:00  WARN 12079 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T15:03:35.113-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-06T15:03:35.120-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-06T15:03:35.142-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-06T15:03:35.144-03:00  INFO 12079 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.745 seconds (process running for 135.599)
+2026-10-06T15:03:35.146-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-06T15:03:49.957-03:00  INFO 12079 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-06T15:03:49.957-03:00  INFO 12079 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-06T15:03:49.958-03:00  INFO 12079 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-06T15:04:45.967-03:00  INFO 12079 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 21 class path changes (0 additions, 0 deletions, 21 modifications)
+2026-10-06T15:04:45.968-03:00  INFO 12079 --- [usuarios-api] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06T15:04:47.973-03:00  INFO 12079 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-06T15:04:47.973-03:00 ERROR 12079 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
 
 java.nio.channels.AsynchronousCloseException
 	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
@@ -346,27 +282,24 @@ java.nio.channels.AsynchronousCloseException
 	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
 	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
 
-2026-10-05T17:06:15.752-03:00  INFO 54870 --- [usuarios-api] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:06:15.757-03:00  INFO 54870 --- [usuarios-api] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T17:06:15.765-03:00  INFO 54870 --- [usuarios-api] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T17:08:19.756-03:00  INFO 56345 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 56345 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:08:19.759-03:00  INFO 56345 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:08:19.799-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-10-05T17:08:19.799-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-10-05T17:08:20.602-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:08:20.656-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:08:21.285-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
-2026-10-05T17:08:21.296-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-05T17:08:21.296-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-05T17:08:21.322-03:00  INFO 56345 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1522 ms
-2026-10-05T17:08:21.530-03:00  WARN 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:08:21.531-03:00  INFO 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T17:08:21.662-03:00  INFO 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69df99b1
-2026-10-05T17:08:21.663-03:00  INFO 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T17:08:21.693-03:00  INFO 56345 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:08:21.732-03:00  INFO 56345 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T17:08:22.014-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:08:22.069-03:00  INFO 56345 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-10-06T15:04:47.976-03:00  INFO 12079 --- [usuarios-api] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T15:04:47.978-03:00  INFO 12079 --- [usuarios-api] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-06T15:04:47.979-03:00  INFO 12079 --- [usuarios-api] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-10-06T15:04:48.060-03:00  INFO 12079 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 12079 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
+2026-10-06T15:04:48.060-03:00  INFO 12079 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-10-06T15:04:48.219-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T15:04:48.228-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2026-10-06T15:04:48.312-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
+2026-10-06T15:04:48.312-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T15:04:48.312-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06T15:04:48.321-03:00  INFO 12079 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 259 ms
+2026-10-06T15:04:48.365-03:00  WARN 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-3 - keepaliveTime is less than 30000ms, disabling it.
+2026-10-06T15:04:48.365-03:00  INFO 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-06T15:04:48.370-03:00  INFO 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f6d93ba
+2026-10-06T15:04:48.370-03:00  INFO 12079 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-06T15:04:48.371-03:00  INFO 12079 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06T15:04:48.396-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T15:04:48.398-03:00  INFO 12079 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -378,367 +311,16 @@ java.nio.channels.AsynchronousCloseException
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-10-05T17:08:22.624-03:00  INFO 56345 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:08:22.630-03:00  INFO 56345 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:08:22.703-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T17:08:22.909-03:00  WARN 56345 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:08:23.355-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:08:23.373-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:08:23.429-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
-2026-10-05T17:08:23.437-03:00  INFO 56345 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 3.976 seconds (process running for 4.482)
-2026-10-05T17:09:20.674-03:00  INFO 56345 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-05T17:09:20.674-03:00  INFO 56345 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-05T17:09:20.675-03:00  INFO 56345 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-05T17:10:00.298-03:00  INFO 56345 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2026-10-05T17:10:00.301-03:00  INFO 56345 --- [usuarios-api] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-05T17:10:02.308-03:00  INFO 56345 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-05T17:10:02.309-03:00 ERROR 56345 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
-
-java.nio.channels.AsynchronousCloseException
-	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
-	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
-	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
-	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
-
-2026-10-05T17:10:02.314-03:00  INFO 56345 --- [usuarios-api] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:10:02.317-03:00  INFO 56345 --- [usuarios-api] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T17:10:02.321-03:00  INFO 56345 --- [usuarios-api] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T17:10:02.438-03:00  INFO 56345 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 56345 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:10:02.439-03:00  INFO 56345 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:10:02.615-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:10:02.623-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:10:02.732-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
-2026-10-05T17:10:02.732-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-05T17:10:02.733-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-05T17:10:02.743-03:00  INFO 56345 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 301 ms
-2026-10-05T17:10:02.785-03:00  WARN 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-2 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:10:02.785-03:00  INFO 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2026-10-05T17:10:02.791-03:00  INFO 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26fb71af
-2026-10-05T17:10:02.791-03:00  INFO 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2026-10-05T17:10:02.792-03:00  INFO 56345 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:10:02.810-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:10:02.813-03:00  INFO 56345 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T17:10:02.869-03:00  INFO 56345 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:10:02.869-03:00  INFO 56345 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:10:02.935-03:00  WARN 56345 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:10:03.008-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:10:03.012-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:10:03.027-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
-2026-10-05T17:10:03.034-03:00  INFO 56345 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.62 seconds (process running for 104.085)
-2026-10-05T17:10:03.036-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-10-05T17:10:40.472-03:00  INFO 56345 --- [usuarios-api] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 21 class path changes (0 additions, 0 deletions, 21 modifications)
-2026-10-05T17:10:40.473-03:00  INFO 56345 --- [usuarios-api] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-05T17:10:40.716-03:00  INFO 56901 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Starting UsuariosApiApplicationTests using Java 26.0.1 with PID 56901 (started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:10:40.717-03:00  INFO 56901 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:10:41.305-03:00  INFO 56901 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:10:41.353-03:00  INFO 56901 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:10:41.756-03:00  WARN 56901 --- [usuarios-api] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:10:41.756-03:00  INFO 56901 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T17:10:41.887-03:00  INFO 56901 --- [usuarios-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47ef5a33
-2026-10-05T17:10:41.889-03:00  INFO 56901 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T17:10:41.912-03:00  INFO 56901 --- [usuarios-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:10:41.951-03:00  INFO 56901 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T17:10:42.257-03:00  INFO 56901 --- [usuarios-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:10:42.322-03:00  INFO 56901 --- [usuarios-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T17:10:42.477-03:00  INFO 56345 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-05T17:10:42.477-03:00 ERROR 56345 --- [usuarios-api] [http-nio-8181-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
-
-java.nio.channels.AsynchronousCloseException
-	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218) ~[na:na]
-	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:372) ~[na:na]
-	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:397) ~[na:na]
-	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:626) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:145) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
-	at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
-
-2026-10-05T17:10:42.479-03:00  INFO 56345 --- [usuarios-api] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:10:42.480-03:00  INFO 56345 --- [usuarios-api] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2026-10-05T17:10:42.481-03:00  INFO 56345 --- [usuarios-api] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2026-10-05T17:10:42.575-03:00  INFO 56345 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 56345 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:10:42.576-03:00  INFO 56345 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:10:42.695-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:10:42.701-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:10:42.780-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
-2026-10-05T17:10:42.781-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-05T17:10:42.782-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-05T17:10:42.791-03:00  INFO 56345 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 213 ms
-2026-10-05T17:10:42.832-03:00  WARN 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-3 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:10:42.832-03:00  INFO 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2026-10-05T17:10:42.836-03:00  INFO 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c50944b
-2026-10-05T17:10:42.837-03:00  INFO 56345 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2026-10-05T17:10:42.838-03:00  INFO 56345 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:10:42.852-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:10:42.854-03:00  INFO 56345 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T17:10:42.948-03:00  INFO 56345 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:10:42.949-03:00  INFO 56345 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:10:43.007-03:00  WARN 56345 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:10:43.054-03:00  INFO 56901 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:10:43.060-03:00  INFO 56901 --- [usuarios-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:10:43.082-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:10:43.087-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:10:43.102-03:00  INFO 56345 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
-2026-10-05T17:10:43.108-03:00  INFO 56345 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.545 seconds (process running for 143.69)
-2026-10-05T17:10:43.109-03:00  INFO 56345 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2026-10-05T17:10:43.142-03:00  INFO 56901 --- [usuarios-api] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T17:10:43.371-03:00  WARN 56901 --- [usuarios-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:10:43.835-03:00  INFO 56901 --- [usuarios-api] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:10:43.852-03:00  INFO 56901 --- [usuarios-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:10:43.905-03:00  INFO 56901 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Started UsuariosApiApplicationTests in 3.419 seconds (process running for 4.2)
-2026-10-05T17:10:44.351-03:00  INFO 56901 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:10:44.353-03:00  INFO 56901 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T17:10:44.360-03:00  INFO 56901 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T17:11:02.272-03:00  INFO 57007 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Starting UsuariosApiApplicationTests using Java 26.0.1 with PID 57007 (started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:11:02.273-03:00  INFO 57007 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:11:02.849-03:00  INFO 57007 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:11:02.888-03:00  INFO 57007 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:11:03.331-03:00  WARN 57007 --- [usuarios-api] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:11:03.332-03:00  INFO 57007 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T17:11:03.485-03:00  INFO 57007 --- [usuarios-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47ef5a33
-2026-10-05T17:11:03.487-03:00  INFO 57007 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T17:11:03.529-03:00  INFO 57007 --- [usuarios-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:11:03.565-03:00  INFO 57007 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T17:11:03.856-03:00  INFO 57007 --- [usuarios-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:11:03.920-03:00  INFO 57007 --- [usuarios-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T17:11:04.459-03:00  INFO 57007 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:11:04.463-03:00  INFO 57007 --- [usuarios-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:11:04.522-03:00  INFO 57007 --- [usuarios-api] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T17:11:04.711-03:00  WARN 57007 --- [usuarios-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:11:05.166-03:00  INFO 57007 --- [usuarios-api] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:11:05.185-03:00  INFO 57007 --- [usuarios-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:11:05.240-03:00  INFO 57007 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Started UsuariosApiApplicationTests in 3.2 seconds (process running for 3.972)
-2026-10-05T17:11:05.738-03:00  INFO 57007 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:11:05.740-03:00  INFO 57007 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T17:11:05.746-03:00  INFO 57007 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T17:11:24.029-03:00  INFO 56345 --- [usuarios-api] [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-05T17:11:24.029-03:00  INFO 56345 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-05T17:11:24.029-03:00  INFO 56345 --- [usuarios-api] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-10-05T17:11:31.508-03:00  INFO 56345 --- [usuarios-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-05T17:11:33.513-03:00  INFO 56345 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-05T17:11:33.514-03:00  INFO 56345 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:11:33.514-03:00  INFO 56345 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2026-10-05T17:11:33.515-03:00  INFO 56345 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2026-10-05T17:12:48.452-03:00  INFO 57467 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Starting UsuariosApiApplicationTests using Java 26.0.1 with PID 57467 (started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:12:48.454-03:00  INFO 57467 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:12:49.009-03:00  INFO 57467 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:12:49.047-03:00  INFO 57467 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:12:49.422-03:00  WARN 57467 --- [usuarios-api] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:12:49.423-03:00  INFO 57467 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T17:12:49.567-03:00  INFO 57467 --- [usuarios-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47ef5a33
-2026-10-05T17:12:49.569-03:00  INFO 57467 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T17:12:49.593-03:00  INFO 57467 --- [usuarios-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:12:49.628-03:00  INFO 57467 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T17:12:49.936-03:00  INFO 57467 --- [usuarios-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:12:49.994-03:00  INFO 57467 --- [usuarios-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T17:12:50.516-03:00  INFO 57467 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:12:50.521-03:00  INFO 57467 --- [usuarios-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:12:50.580-03:00  INFO 57467 --- [usuarios-api] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T17:12:50.754-03:00  WARN 57467 --- [usuarios-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:12:51.251-03:00  INFO 57467 --- [usuarios-api] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:12:51.270-03:00  INFO 57467 --- [usuarios-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:12:51.327-03:00  INFO 57467 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Started UsuariosApiApplicationTests in 3.105 seconds (process running for 4.008)
-2026-10-05T17:12:51.768-03:00  INFO 57467 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:12:51.771-03:00  INFO 57467 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T17:12:51.776-03:00  INFO 57467 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T17:13:11.046-03:00  INFO 57514 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Starting UsuariosApiApplicationTests using Java 26.0.1 with PID 57514 (started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:13:11.048-03:00  INFO 57514 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:13:11.610-03:00  INFO 57514 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:13:11.648-03:00  INFO 57514 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:13:12.064-03:00  WARN 57514 --- [usuarios-api] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:13:12.064-03:00  INFO 57514 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T17:13:12.200-03:00  INFO 57514 --- [usuarios-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47ef5a33
-2026-10-05T17:13:12.201-03:00  INFO 57514 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T17:13:12.224-03:00  INFO 57514 --- [usuarios-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:13:12.260-03:00  INFO 57514 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T17:13:12.597-03:00  INFO 57514 --- [usuarios-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:13:12.662-03:00  INFO 57514 --- [usuarios-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T17:13:13.215-03:00  INFO 57514 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:13:13.221-03:00  INFO 57514 --- [usuarios-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:13:13.291-03:00  INFO 57514 --- [usuarios-api] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T17:13:13.481-03:00  WARN 57514 --- [usuarios-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:13:13.942-03:00  INFO 57514 --- [usuarios-api] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:13:13.959-03:00  INFO 57514 --- [usuarios-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:13:14.007-03:00  INFO 57514 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Started UsuariosApiApplicationTests in 3.177 seconds (process running for 4.0)
-2026-10-05T17:13:14.427-03:00  INFO 57514 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:13:14.429-03:00  INFO 57514 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T17:13:14.435-03:00  INFO 57514 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T17:13:31.924-03:00  INFO 57560 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Starting UsuariosApiApplicationTests using Java 26.0.1 with PID 57560 (started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:13:31.925-03:00  INFO 57560 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:13:32.446-03:00  INFO 57560 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:13:32.483-03:00  INFO 57560 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:13:32.859-03:00  WARN 57560 --- [usuarios-api] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:13:32.859-03:00  INFO 57560 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T17:13:33.002-03:00  INFO 57560 --- [usuarios-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47ef5a33
-2026-10-05T17:13:33.003-03:00  INFO 57560 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T17:13:33.026-03:00  INFO 57560 --- [usuarios-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:13:33.090-03:00  INFO 57560 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T17:13:33.362-03:00  INFO 57560 --- [usuarios-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:13:33.421-03:00  INFO 57560 --- [usuarios-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T17:13:33.946-03:00  INFO 57560 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:13:33.950-03:00  INFO 57560 --- [usuarios-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:13:34.018-03:00  INFO 57560 --- [usuarios-api] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T17:13:34.191-03:00  WARN 57560 --- [usuarios-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:13:34.613-03:00  INFO 57560 --- [usuarios-api] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:13:34.631-03:00  INFO 57560 --- [usuarios-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:13:34.680-03:00  INFO 57560 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Started UsuariosApiApplicationTests in 2.961 seconds (process running for 3.74)
-2026-10-05T17:13:35.121-03:00  INFO 57560 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:13:35.123-03:00  INFO 57560 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T17:13:35.130-03:00  INFO 57560 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T17:14:05.671-03:00  INFO 57607 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Starting UsuariosApiApplicationTests using Java 26.0.1 with PID 57607 (started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:14:05.672-03:00  INFO 57607 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:14:06.170-03:00  INFO 57607 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:14:06.204-03:00  INFO 57607 --- [usuarios-api] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:14:06.585-03:00  WARN 57607 --- [usuarios-api] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:14:06.586-03:00  INFO 57607 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T17:14:06.714-03:00  INFO 57607 --- [usuarios-api] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47ef5a33
-2026-10-05T17:14:06.715-03:00  INFO 57607 --- [usuarios-api] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T17:14:06.735-03:00  INFO 57607 --- [usuarios-api] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:14:06.769-03:00  INFO 57607 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T17:14:07.042-03:00  INFO 57607 --- [usuarios-api] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:14:07.103-03:00  INFO 57607 --- [usuarios-api] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T17:14:07.669-03:00  INFO 57607 --- [usuarios-api] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:14:07.673-03:00  INFO 57607 --- [usuarios-api] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:14:07.735-03:00  INFO 57607 --- [usuarios-api] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T17:14:07.963-03:00  WARN 57607 --- [usuarios-api] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:14:08.444-03:00  INFO 57607 --- [usuarios-api] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:14:08.460-03:00  INFO 57607 --- [usuarios-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:14:08.507-03:00  INFO 57607 --- [usuarios-api] [main] c.v.u.UsuariosApiApplicationTests        : Started UsuariosApiApplicationTests in 3.057 seconds (process running for 3.871)
-2026-10-05T17:14:08.962-03:00  INFO 57607 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:14:08.964-03:00  INFO 57607 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T17:14:08.970-03:00  INFO 57607 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-10-05T17:14:36.427-03:00  INFO 57655 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Starting UsuariosApiApplication using Java 26.0.1 with PID 57655 (/Volumes/Development/code/java/velsis/usuarios-api/target/classes started by emerson in /Volumes/Development/code/java/velsis/usuarios-api)
-2026-10-05T17:14:36.430-03:00  INFO 57655 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-10-05T17:14:36.470-03:00  INFO 57655 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-10-05T17:14:36.470-03:00  INFO 57655 --- [usuarios-api] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-10-05T17:14:37.077-03:00  INFO 57655 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-10-05T17:14:37.114-03:00  INFO 57655 --- [usuarios-api] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
-2026-10-05T17:14:37.645-03:00  INFO 57655 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8181 (http)
-2026-10-05T17:14:37.655-03:00  INFO 57655 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-10-05T17:14:37.655-03:00  INFO 57655 --- [usuarios-api] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-10-05T17:14:37.684-03:00  INFO 57655 --- [usuarios-api] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1214 ms
-2026-10-05T17:14:37.882-03:00  WARN 57655 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - keepaliveTime is less than 30000ms, disabling it.
-2026-10-05T17:14:37.882-03:00  INFO 57655 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-10-05T17:14:38.013-03:00  INFO 57655 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78317c30
-2026-10-05T17:14:38.015-03:00  INFO 57655 --- [usuarios-api] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-10-05T17:14:38.036-03:00  INFO 57655 --- [usuarios-api] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-10-05T17:14:38.072-03:00  INFO 57655 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-10-05T17:14:38.343-03:00  INFO 57655 --- [usuarios-api] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-10-05T17:14:38.402-03:00  INFO 57655 --- [usuarios-api] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/usuarios?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 26.7
-	Default catalog/schema: usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-10-05T17:14:38.933-03:00  INFO 57655 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-10-05T17:14:38.937-03:00  INFO 57655 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:14:39.001-03:00  INFO 57655 --- [usuarios-api] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-10-05T17:14:39.195-03:00  WARN 57655 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-10-05T17:14:39.652-03:00  INFO 57655 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2026-10-05T17:14:39.669-03:00  INFO 57655 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-10-05T17:14:39.733-03:00  INFO 57655 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
-2026-10-05T17:14:39.741-03:00  INFO 57655 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 3.594 seconds (process running for 4.068)
-2026-10-05T17:14:40.566-03:00  INFO 57655 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[.[localhost].[/usuarios-api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-10-05T17:14:40.566-03:00  INFO 57655 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-10-05T17:14:40.567-03:00  INFO 57655 --- [usuarios-api] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-10-05T17:14:58.739-03:00  INFO 57655 --- [usuarios-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-10-05T17:15:00.745-03:00  INFO 57655 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-10-05T17:15:00.748-03:00  INFO 57655 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-10-05T17:15:00.751-03:00  INFO 57655 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-10-05T17:15:00.754-03:00  INFO 57655 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-06T15:04:48.456-03:00  INFO 12079 --- [usuarios-api] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T15:04:48.456-03:00  INFO 12079 --- [usuarios-api] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T15:04:48.538-03:00  WARN 12079 --- [usuarios-api] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T15:04:48.680-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-06T15:04:48.684-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-06T15:04:48.697-03:00  INFO 12079 --- [usuarios-api] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8181 (http) with context path '/usuarios-api'
+2026-10-06T15:04:48.699-03:00  INFO 12079 --- [usuarios-api] [restartedMain] c.v.usuarios_api.UsuariosApiApplication  : Started UsuariosApiApplication in 0.655 seconds (process running for 209.152)
+2026-10-06T15:04:48.701-03:00  INFO 12079 --- [usuarios-api] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-06T15:05:02.700-03:00  INFO 12079 --- [usuarios-api] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06T15:05:04.706-03:00  INFO 12079 --- [usuarios-api] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-06T15:05:04.708-03:00  INFO 12079 --- [usuarios-api] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T15:05:04.709-03:00  INFO 12079 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-06T15:05:04.710-03:00  INFO 12079 --- [usuarios-api] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
