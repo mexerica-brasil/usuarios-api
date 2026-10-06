@@ -51,13 +51,13 @@ public class Endereco {
     @NotBlank 
     @NotNull
     @Size(min = 2, max = 2)  
-    @Pattern (regexp = "^\\d{5}-\\d{3}$")
     @Column(name = "uf", nullable = false, length = 2)
     private String uf;
 
     @NotBlank 
     @NotNull 
     @Size(min = 9, max = 9) 
+    @Pattern (regexp = "^\\d{5}-\\d{3}$")
     @Column(name = "cep", nullable = false, length = 9, unique = true)
     private String cep;
 
