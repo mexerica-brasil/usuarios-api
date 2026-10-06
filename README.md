@@ -190,7 +190,7 @@ mvn spring-boot:run
 Ou execute o JAR gerado:
 
 ```bash
-java -jar target/usuarios-api-1.0.0.jar
+java -jar target/usuarios-api-0.0.2.jar
 ```
 
 Por padrão, a aplicação será disponibilizada em:
