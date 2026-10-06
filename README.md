@@ -196,7 +196,7 @@ java -jar target/usuarios-api-0.0.2.jar
 Por padrão, a aplicação será disponibilizada em:
 
 ```text
-http://localhost:8181
+http://localhost:8181/usuarios-api
 ```
 
 ---
